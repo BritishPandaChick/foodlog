@@ -1,5 +1,7 @@
 class CreateEntries < ActiveRecord::Migration[7.0]
   def change
+    drop_table :entries
+
     create_table :entries do |t|
       t.string :meal_type
       t.integer :calories
