@@ -1,4 +1,19 @@
-<h1>Entries</h1>
+<% content_for :title do %>
+  Foodlog &ndash; <%= DateTime.now %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Meal type</th>
+      <th>Calories</th>
+      <th>Proteins</th>
+      <th>Carbohydrates</th>
+      <th>Fats</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+</table>
 
 <div id="entries">
   <% @entries.each do |entry| %>
