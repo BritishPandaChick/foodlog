@@ -40,6 +40,13 @@
     <%= form.number_field :fats, class: "input" %>
   </div>
 
+  <div class="field">
+    <%= form.label :category, class: "label" %>
+    <div class="select">
+      <%= form.select, :category_id, Category.all.collect, {|u| [u.title, u.id]}, class: "select" %>
+    </div>
+  </div>
+
   <div class="actions">
     <%= form.submit, class: "button is-success" %>
   </div>
